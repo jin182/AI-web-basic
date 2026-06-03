@@ -33,7 +33,13 @@ logger = logging.getLogger(__name__)
 
 # Flask 앱 초기화
 app = Flask(__name__)
-CORS(app, origins=["https://jin182.github.io/AI-web-basic-front/"], supports_credentials=True )
+CORS(
+    app,
+    origins=[
+        "https://jin182.github.io"
+    ],
+    supports_credentials=True
+)
 app.config['SECRET_KEY'] = 'legal-rag-secret-2024'
 
 # 전역 변수
