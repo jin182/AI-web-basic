@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 # Flask 앱 초기화
 app = Flask(__name__)
-CORS(app, origins=["https://ai-web-basic.onrender.com", "http://localhost:3000"], supports_credentials=True )
+CORS(app, origins=["https://jin182.github.io/AI-web-basic-front/"], supports_credentials=True )
 app.config['SECRET_KEY'] = 'legal-rag-secret-2024'
 
 # 전역 변수
@@ -684,7 +684,7 @@ def home():
     <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="3;url=https://ai-web-basic.onrender.com">
+        <meta http-equiv="refresh" content="3;url=https://jin182.github.io/AI-web-basic-front/">
         <title>CPPG & ISMS-P 학습 가이드 서비스</title>
         <style>
             body { 
@@ -757,20 +757,20 @@ def home():
             
             <div class="status info">
                 <h3><span class="loading"></span> 프론트엔드 포트 브릿지 매핑 중...</h3>
-                <p>3초 후 자동으로 프론트엔드 대시보드(https://ai-web-basic.onrender.com)로 라우팅됩니다.</p>
+                <p>3초 후 자동으로 프론트엔드 대시보드(https://jin182.github.io/AI-web-basic-front/)로 라우팅됩니다.</p>
             </div>
             
             <div style="margin-top: 30px;">
-                <a href="https://ai-web-basic.onrender.com" class="btn">즉시 대시보드 이동</a>
+                <a href="https://jin182.github.io/AI-web-basic-front/" class="btn">즉시 대시보드 이동</a>
                 <a href="/api/health" class="btn">엔진 메트릭 상태(Health)</a>
             </div>
         </div>
         <script>
             setTimeout(() => {
-                window.location.href = 'https://ai-web-basic.onrender.com';
+                window.location.href = 'https://jin182.github.io/AI-web-basic-front/';
             }, 3000);
-            fetch('https://ai-web-basic.onrender.com')
-                .then(() => { window.location.href = 'https://ai-web-basic.onrender.com'; })
+            fetch('https://jin182.github.io/AI-web-basic-front/')
+                .then(() => { window.location.href = 'https://jin182.github.io/AI-web-basic-front/'; })
                 .catch(() => { console.log('프론트엔드가 실행되지 않았습니다'); });
         </script>
     </body>
