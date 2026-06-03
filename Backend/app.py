@@ -356,7 +356,6 @@ CPPG 및 ISMS-P 관련 도메인 지식을 바탕으로 성실하게 답변하�
             model='gemini-2.5-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
-                tools=[{"google_search": {}}],  
                 temperature=0.2,
                 max_output_tokens=20000,
                 top_p=0.9
