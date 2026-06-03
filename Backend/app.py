@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 # Flask 앱 초기화
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+CORS(app, origins=["https://ai-web-basic.onrender.com", "http://localhost:3000"], supports_credentials=True )
 app.config['SECRET_KEY'] = 'legal-rag-secret-2024'
 
 # 전역 변수
@@ -684,7 +684,7 @@ def home():
     <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="3;url=http://localhost:3000">
+        <meta http-equiv="refresh" content="3;url=https://ai-web-basic.onrender.com">
         <title>CPPG & ISMS-P 학습 가이드 서비스</title>
         <style>
             body { 
@@ -757,20 +757,20 @@ def home():
             
             <div class="status info">
                 <h3><span class="loading"></span> 프론트엔드 포트 브릿지 매핑 중...</h3>
-                <p>3초 후 자동으로 프론트엔드 대시보드(localhost:3000)로 라우팅됩니다.</p>
+                <p>3초 후 자동으로 프론트엔드 대시보드(https://ai-web-basic.onrender.com)로 라우팅됩니다.</p>
             </div>
             
             <div style="margin-top: 30px;">
-                <a href="http://localhost:3000" class="btn">즉시 대시보드 이동</a>
+                <a href="https://ai-web-basic.onrender.com" class="btn">즉시 대시보드 이동</a>
                 <a href="/api/health" class="btn">엔진 메트릭 상태(Health)</a>
             </div>
         </div>
         <script>
             setTimeout(() => {
-                window.location.href = 'http://localhost:3000';
+                window.location.href = 'https://ai-web-basic.onrender.com';
             }, 3000);
-            fetch('http://localhost:3000')
-                .then(() => { window.location.href = 'http://localhost:3000'; })
+            fetch('https://ai-web-basic.onrender.com')
+                .then(() => { window.location.href = 'https://ai-web-basic.onrender.com'; })
                 .catch(() => { console.log('프론트엔드가 실행되지 않았습니다'); });
         </script>
     </body>
@@ -828,7 +828,7 @@ if __name__ == '__main__':
     try:
         initialize()
         port = int(os.environ.get('PORT', 8000))
-        logger.info(f"서버 정상 빌딩: http://localhost:{port}")
+        logger.info(f"서버 정상 빌딩: https://localhost:{port}")
         app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
     except Exception as e:
         logger.error(f"서버 런타임 크래시: {e}")
