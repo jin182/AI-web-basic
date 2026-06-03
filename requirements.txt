@@ -1,18 +1,12 @@
-# Web Framework & Server
 Flask==3.0.3
 Flask-Cors==4.0.0
-
-# Environment Variables
 python-dotenv==1.0.1
-
-# AI & LLM (최신 Gemini SDK)
 google-genai==0.3.0
 
-# RAG & Data Science (TF-IDF, Cosine Similarity)
-numpy==1.26.4
-scipy==1.13.0
-scikit-learn==1.4.2
-joblib==1.4.2
+numpy
+scipy
+scikit-learn
+joblib
 
-# PDF Processing (build_index.py 용)
-PyMuPDF==1.24.2
+PyMuPDF
+gunicorn
