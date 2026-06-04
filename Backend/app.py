@@ -357,7 +357,7 @@ CPPG 및 ISMS-P 관련 도메인 지식을 바탕으로 성실하게 답변하�
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.2,
-                max_output_tokens=20000,
+                max_output_tokens=8192,
                 top_p=0.9
             )
         )
@@ -371,7 +371,7 @@ CPPG 및 ISMS-P 관련 도메인 지식을 바탕으로 성실하게 답변하�
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.2,
-                    max_output_tokens=20000
+                    max_output_tokens=8192
                 )
             )
             return response.text.strip()
