@@ -40,7 +40,7 @@ CORS(
     ],
     supports_credentials=True
 )
-app.config['SECRET_KEY'] = 'legal-rag-secret-2024'
+app.config['SECRET_KEY'] = '시크릿 키 설정'
 
 # 전역 변수
 DATABASE_PATH = "legal_rag.db"
